@@ -1,27 +1,119 @@
-# ChatRoom
+Details with screen shots avaialable in below link.
+https://java99beginnertoprofessional.blogspot.com/2019/08/chat-bot-sprigboot-websocketsangular-8.html
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.
 
-## Development server
+What we are building? 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Basically, we will create two projects frontend and backend to build chat application POC. 
 
-## Code scaffolding
+Springboot Websocket (backend): This project is developed to support WebSocket endpoint at server side with user basic user authentication, registration and saving chat history. 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Tech Stack. 
 
-## Build
+1)    Java 1.8. 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+2)    Spring Boot Rest. 
 
-## Running unit tests
+3)    JPA – Embedded H2 DB. 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+4) Swagger 
 
-## Running end-to-end tests
+5)    Maven build.  
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+6) Swagger 
 
-## Further help
+7) Mockito 
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+     
+
+Angular8 - StompJs and SockJs (frontend): This project is developed as multipage login, register and home(chat) application. This is developed on Angular 8 and subscribes and exchanges messages over WebSocket. 
+
+Tech Stack. 
+
+1)      Angular 8 .2.2 
+
+2)      Node 12.7 
+
+3)      Stomp and Sockjs. 
+
+  
+
+Building Application 
+
+1) Springboot Websocket (backend):  
+
+Clone application from git  and build Application using maven 
+
+mvn clean install 
+
+mvn spring-boot:run  
+
+Application will run on “9000” port. 
+
+http://localhost:9000 
+
+ 
+
+1)     Angular8 - StompJs and SockJs (frontend):  
+
+Clone application from git https://github.com/csmitha/ChatBot---FrontEnd--Angular8/upload and build Application. Please refer to the Tech stack on top. 
+
+ 
+
+cd to downloaded application path.  
+
+npm install stompjs; 
+
+npm install sockjs-client 
+
+npm install jquery (just to quickly access the DOM elements) 
+
+npm install.  
+
+npm start. 
+
+Application will start on “4200” port. 
+
+http://localhost:4200  
+
+ 
+
+ 
+
+Executing Application 
+
+1) user Login Page 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+2) User Registration Page 
+
+ 
+
+ 
+
+3) Enter username - “TTom”  and  password “123456” on the Login screen to navigate to chat screen.  
+
+ 
+
+ 
+
+4) Enter username - “JRobert”  and  password “123456” on the Login screen to navigate to chat screen for second user. Let's roll! 
+
+5) Message exchange between different users. 
+
+ 
+
+6) Data is persisted on embedded H2 DB. 
+
+ 
+
+ 
