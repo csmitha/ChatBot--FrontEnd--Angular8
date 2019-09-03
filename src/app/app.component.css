@@ -1,0 +1,17 @@
+
+
+  #appstyle {
+    display: flex;
+    position: relative;
+    height: 100%;
+    width: 1950px;
+    justify-content: center;
+    padding-top: 60px;
+    background-color: #e9ecef;
+  }
+  
+  
+  h1 {
+    padding-right: 100px;
+    padding-top: 100px;
+  }
