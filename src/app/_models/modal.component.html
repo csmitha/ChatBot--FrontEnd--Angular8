@@ -1,0 +1,29 @@
+﻿<div class="jw-modal">
+    <div class="jw-modal-body">
+        <ng-content></ng-content>
+        <div>
+                <h2 style="text-align:center">User Chat History</h2>
+                </div>
+                <div id="history">
+                    <div class="container">
+                        <table class="table table-striped">
+                          <thead>
+                              <tr>
+                                <th>Chat Content</th>
+                                <th>Date</th>
+                                
+                              </tr>
+                          </thead>
+                          <tbody>
+                            <tr *ngFor="let history of historyList">
+                              <td>{{ history.content }}</td>
+                              <td>{{ history.time }}</td>              
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+            </div>
+        
+    </div>
+</div>
+<div class="jw-modal-background"></div>

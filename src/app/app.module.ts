@@ -9,9 +9,9 @@ import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RegisterComponent } from './register';
-import { HistoryComponent } from './history';
 import { AlertComponent } from './_components';
 import {  ErrorInterceptor } from './_helpers/error.interceptor';
+import { ModalModule } from './_models';
 
 
 @NgModule({
@@ -20,15 +20,15 @@ import {  ErrorInterceptor } from './_helpers/error.interceptor';
     LoginComponent,
     HomeComponent,
     RegisterComponent,
-    AlertComponent,
-    HistoryComponent
+    AlertComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ModalModule
     
   ],
   providers: [  { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },{ provide: Window, useValue: window }],

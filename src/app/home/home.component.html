@@ -1,11 +1,12 @@
 ﻿<div id="chat-page" class="">
 
     <div class="chat-container">
-        <div class="chat-header2">
-            <p>{{currentUser.firstName}} {{currentUser.lastName}} Logged in <b></b> <b></b> <b></b> <button
+        <div *ngIf="currentUser" class="chat-header2" >
+            <p>   {{currentUser.firstName}} {{currentUser.lastName}} Logged in <b></b> <b></b> <b></b> <button
                     (click)="_disconnect()" type="submit" class="primary">Logout</button>
-            </p>
-            <router-outlet></router-outlet>
+                    <b></b> <b></b> <b></b> 
+            <button (click)="openModal('custom-modal-1')" class="primary" style="float: right;">Chat History</button>
+        </p>
         </div>
         <div class="chat-header">
             <h2>Lets start chatting!</h2>
@@ -29,3 +30,7 @@
     </div>
 
 </div>
+
+<jw-modal id="custom-modal-1">       
+        <button (click)="closeModal('custom-modal-1');" class="primary" style="float: right;">Close</button>
+</jw-modal>

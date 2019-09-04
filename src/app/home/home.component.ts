@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 
 import { User } from '../_models';
 import { DataService, AlertService } from '../_services';
+import { ModalService } from '../_models';
 
 
 @Injectable({ providedIn: 'root' })
@@ -31,7 +32,8 @@ export class HomeComponent implements OnInit {
     private dataService: DataService,
     private router: Router,
     private alertService: AlertService,
-    private el: ElementRef, @Inject(Window) private win: Window
+    private el: ElementRef, @Inject(Window) private win: Window,
+    private modalService: ModalService
   ) {
 
     this.messageForm = new FormGroup({
@@ -39,7 +41,7 @@ export class HomeComponent implements OnInit {
     });
 
   }
- 
+
 
   ngOnInit() {
     this.currentUser = this.dataService.user;
@@ -192,6 +194,14 @@ export class HomeComponent implements OnInit {
     ];
     var index = Math.abs(hash % colors.length);
     return colors[index];
+  }
+
+  openModal(id: string) {
+    this.modalService.open(id,this.currentUser.username);
+  }
+
+  closeModal(id: string) {
+    this.modalService.close(id);
   }
 
 
